@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Web Sandbox</title>
+	<link rel="stylesheet" href="codemirror/codemirror.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container grid">
+		<form autocomplete="off">
+			<h2>HTML</h2>
+<textarea id="html">
+&lt;h2 id="test"&gt;hello&lt;/h2&gt;
+</textarea>
+
+			<h2>CSS</h2>
+<textarea id="css">
+h2 {
+  color: blue;
+}
+</textarea>
+
+			<h2>Javascript</h2><button id="run" type="button">RUN</button>
+<textarea id="js">
+document.getElementById('test').onclick = touch;
+function touch() {
+  alert('test');
+}
+</textarea>
+		</form>
+	</div>
+	<div class="output grid">
+		<iframe id="preview"></iframe>
+	</div>
+<script src="codemirror/codemirror-compressed.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
